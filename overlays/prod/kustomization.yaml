@@ -1,0 +1,13 @@
+namespace: nginx-prod
+
+resources:
+  - ../../base
+
+configMapGenerator:
+  - name: nginx-config
+    files:
+      - configmap.yaml
+
+commonLabels:
+  env: prod
+
